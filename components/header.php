@@ -1,8 +1,9 @@
 <header>
+    <img src="assets/img/banners/<?= htmlspecialchars(file_exists(__DIR__ . "/assets/img/banners/{$page['slug']}.jpg") ? $page['slug'] : 'DEFAULT') ?>.jpg">
     <a href="<?= url() ?>" aria-label="Zur Startseite">
         <span><?= htmlspecialchars($config['site_name']) ?></span>
     </a>
-
+    <img src="assets/img/logo1.jpg">
     <nav aria-label="Hauptnavigation">
         <ul>
             <?php foreach ($config['nav'] as $slug): ?>
