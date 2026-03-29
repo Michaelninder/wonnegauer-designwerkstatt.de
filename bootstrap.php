@@ -1,12 +1,10 @@
 <?php
 
-    require_once(__DIR__ . '/config.php');
-    require_once(__DIR__ . '/helpers.php');
+require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/helpers.php';
+require_once __DIR__ . '/router.php';
 
-    $uri = $_SERVER['REQUEST_URI'];
+$config = require __DIR__ . '/config.php';
+$page   = resolve_page($config);
 
-    echo"DEBUG: bootstrap.php";
-
-?>
-
-<?php include __DIR__ . '/views/layout.php'; ?>
+include __DIR__ . '/views/layout.php';
