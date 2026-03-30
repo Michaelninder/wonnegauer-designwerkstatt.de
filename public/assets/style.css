@@ -116,6 +116,8 @@ p:last-child { margin-bottom: 0; }
     padding: .4rem;
     margin-left: auto;
     flex-shrink: 0;
+    position: relative;
+    z-index: 300; /* always above the nav overlay (z-index: 200) */
 }
 
 .nav-toggle__bar {
@@ -124,7 +126,25 @@ p:last-child { margin-bottom: 0; }
     height: 2px;
     background: #2c2c2c;
     border-radius: 2px;
-    transition: transform .2s, opacity .2s;
+    transition: transform .25s ease, opacity .25s ease;
+    transform-origin: center;
+}
+
+/* when nav is open, bars are on dark background — switch to white */
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar {
+    background: #fff;
+}
+
+/* animate bars into × when open */
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 /* ── Main nav ─────────────────────────────────────────────── */
@@ -325,21 +345,44 @@ p:last-child { margin-bottom: 0; }
 
 /* ── Footer ───────────────────────────────────────────────── */
 .site-footer {
-    border-top: 1px solid #d4cfc8;
+    border-top: 3px solid #2c2c2c;
     margin-top: 3rem;
-    padding: 1.5rem 0;
-    font-size: .85rem;
-    color: #888;
+    background: #2c2c2c;
+    color: #aaa;
+    font-size: .82rem;
 }
 
 .site-footer__inner {
-    padding: 1rem 1.5rem;
+    padding: 1.25rem 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
     flex-wrap: wrap;
 }
+
+.site-footer__info {
+    display: flex;
+    flex-direction: column;
+    gap: .1rem;
+    line-height: 1.5;
+}
+
+.site-footer__info strong {
+    color: #fff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: .85rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.site-footer__info a {
+    color: #aaa;
+}
+
+.site-footer__info a:hover { color: #fff; }
+
+.site-footer__copy { color: #666; }
 
 .footer-nav__list {
     list-style: none;
@@ -349,13 +392,56 @@ p:last-child { margin-bottom: 0; }
 
 .footer-nav__list a {
     text-decoration: none;
-    color: #888;
+    color: #aaa;
 }
 
 .footer-nav__list a:hover,
 .footer-nav__list a[aria-current="page"] {
-    color: #2c2c2c;
+    color: #fff;
     text-decoration: underline;
+}
+
+/* ── Error pages (404 / 500) ──────────────────────────────── */
+.page-error {
+    text-align: center;
+    padding: 4rem 1.5rem;
+}
+
+.page-error__code {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #d4cfc8;
+    margin-bottom: .5rem;
+}
+
+.page-error__title {
+    font-size: 1.6rem;
+    margin-bottom: .75rem;
+}
+
+.page-error__msg {
+    color: #666;
+    max-width: 40ch;
+    margin: 0 auto 2rem;
+}
+
+.page-error__back {
+    display: inline-block;
+    padding: .6rem 1.5rem;
+    background: #2c2c2c;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: .85rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.page-error__back:hover {
+    background: #444;
+    text-decoration: none;
 }
 
 /* ── Design – two images side by side ────────────────────── */
@@ -473,20 +559,6 @@ p:last-child { margin-bottom: 0; }
     .main-nav__item--active a:hover {
         background: #fff;
         color: #2c2c2c;
-    }
-
-    /* close button */
-    .nav-close {
-        display: block;
-        position: absolute;
-        top: 1.25rem;
-        right: 1.5rem;
-        background: none;
-        border: none;
-        color: #fff;
-        font-size: 2rem;
-        cursor: pointer;
-        line-height: 1;
     }
 
     /* prevent body scroll when nav open */

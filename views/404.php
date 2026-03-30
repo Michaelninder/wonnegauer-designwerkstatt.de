@@ -1,5 +1,6 @@
-<article>
-    <h1>Seite nicht gefunden</h1>
-    <p>Die gesuchte Seite existiert leider nicht.</p>
-    <p><a href="<?= url() ?>">Zurück zur Startseite</a></p>
+<article class="page-error">
+    <div class="page-error__code">404</div>
+    <h1 class="page-error__title">Seite nicht gefunden</h1>
+    <p class="page-error__msg">Die gesuchte Seite existiert leider nicht oder wurde verschoben.</p>
+    <a class="page-error__back" href="<?= url() ?>">← Zurück zur Startseite</a>
 </article>

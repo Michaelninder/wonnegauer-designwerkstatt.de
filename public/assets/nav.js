@@ -1,6 +1,5 @@
 (function () {
     const toggle = document.querySelector('.nav-toggle');
-    const close  = document.querySelector('.nav-close');
     const nav    = document.getElementById('main-nav');
 
     if (!toggle || !nav) return;
@@ -8,19 +7,22 @@
     function openNav() {
         nav.classList.add('main-nav--open');
         toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', 'Navigation schließen');
         document.body.classList.add('nav-open');
     }
 
     function closeNav() {
         nav.classList.remove('main-nav--open');
         toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Navigation öffnen');
         document.body.classList.remove('nav-open');
     }
 
-    toggle.addEventListener('click', openNav);
-    if (close) close.addEventListener('click', closeNav);
+    toggle.addEventListener('click', function () {
+        toggle.getAttribute('aria-expanded') === 'true' ? closeNav() : openNav();
+    });
 
-    // close on backdrop click (outside nav)
+    // close on backdrop click
     document.addEventListener('click', function (e) {
         if (nav.classList.contains('main-nav--open') &&
             !nav.contains(e.target) &&

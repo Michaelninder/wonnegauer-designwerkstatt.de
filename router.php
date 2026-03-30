@@ -5,12 +5,10 @@
  * Returns the page config array or falls back to a 404 page.
  */
 function resolve_page(array $config): array {
-    $uri = strtok($_SERVER['REQUEST_URI'], '?'); // strip query string
+    $uri = strtok($_SERVER['REQUEST_URI'], '?');
     $uri = rtrim($uri, '/');
     $uri = $uri === '' ? '/' : $uri;
 
-    // map URI path to page key
-    // e.g. /aktuell -> 'aktuell', / -> 'index'
     $slug = ltrim($uri, '/');
     $slug = $slug === '' ? 'index' : $slug;
 
@@ -18,12 +16,24 @@ function resolve_page(array $config): array {
         return array_merge($config['pages'][$slug], ['slug' => $slug]);
     }
 
-    // 404 fallback
     http_response_code(404);
     return [
         'title'       => 'Seite nicht gefunden',
         'description' => '',
         'view'        => '404',
         'slug'        => '404',
+    ];
+}
+
+/**
+ * Returns the page config for a 500 error.
+ */
+function error_page(): array {
+    http_response_code(500);
+    return [
+        'title'       => 'Serverfehler',
+        'description' => '',
+        'view'        => '500',
+        'slug'        => '500',
     ];
 }

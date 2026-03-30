@@ -141,6 +141,18 @@ return [
                     'url'   => 'https://www.fabianternis.de',
                     'titel' => 'Fabian Ternis – Webentwicklung',
                 ],
+                [
+                    'url'   => 'https://www.xpsystems.de',
+                    'titel' => 'xpsystems – Webentwicklung',
+                ],
+                [
+                    'url'   => 'https://www.fabianternis.dev',
+                    'titel' => 'Fabian Ternis – Webentwickler',
+                ],
+                [
+                    'url'   => 'https://www.ternis.eu',
+                    'titel' => 'Ternis.eu – Linkssammlung',
+                ],
             ],
         ],
         'kontakt' => [
