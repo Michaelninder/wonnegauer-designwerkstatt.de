@@ -1,0 +1,227 @@
+/* ── Reset & Base ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 16px; }
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #2c2c2c;
+    background: #f5f2ed;
+    line-height: 1.7;
+}
+
+a { color: inherit; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; display: block; }
+
+h1, h2, h3 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+h1 { font-size: 2rem;   margin-bottom: 1rem; }
+h2 { font-size: 1.4rem; margin-bottom: .75rem; }
+h3 { font-size: 1.15rem; margin-bottom: .5rem; }
+
+p { margin-bottom: 1rem; }
+p:last-child { margin-bottom: 0; }
+
+/* ── Layout wrapper ───────────────────────────────────────── */
+.site-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+.site-header {
+    border-bottom: 1px solid #d4cfc8;
+    padding: 1rem 0;
+}
+
+.site-header__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.site-header__banner {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.site-header__logo-link {
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.site-header__logo-img {
+    height: 60px;
+    width: auto;
+}
+
+.site-header__title {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    flex: 1;
+}
+
+/* ── Main nav ─────────────────────────────────────────────── */
+.main-nav { width: 100%; }
+
+.main-nav__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem 0;
+    border-top: 1px solid #d4cfc8;
+    padding-top: .5rem;
+    margin-top: .5rem;
+}
+
+.main-nav__list li a {
+    display: inline-block;
+    padding: .3rem .75rem;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: .85rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: #555;
+    border-right: 1px solid #d4cfc8;
+}
+
+.main-nav__list li:last-child a { border-right: none; }
+
+.main-nav__list li a:hover,
+.main-nav__list li a[aria-current="page"] {
+    color: #2c2c2c;
+    text-decoration: underline;
+}
+
+/* ── Main content ─────────────────────────────────────────── */
+.site-main {
+    max-width: 1100px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+
+/* ── Page layout: image left, text right ─────────────────── */
+.page-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.page-content__images {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.page-content__images img {
+    width: 100%;
+}
+
+.page-content__text { /* text column, no extra styles needed */ }
+
+/* ── Two-column layout (wir.php) ──────────────────────────── */
+.zwei-spalten {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin: 1.5rem 0;
+}
+
+/* ── Termine ──────────────────────────────────────────────── */
+.termine-liste {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.termin {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #d4cfc8;
+}
+
+.termin:last-child { border-bottom: none; }
+
+.termin-datum {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: .85rem;
+    color: #888;
+    padding-top: .2rem;
+}
+
+.termin-titel { margin-bottom: .25rem; }
+
+/* ── Footer ───────────────────────────────────────────────── */
+.site-footer {
+    border-top: 1px solid #d4cfc8;
+    margin-top: 3rem;
+    padding: 1.5rem 0;
+    font-size: .85rem;
+    color: #888;
+}
+
+.site-footer__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-nav__list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-nav__list a {
+    text-decoration: none;
+    color: #888;
+}
+
+.footer-nav__list a:hover,
+.footer-nav__list a[aria-current="page"] {
+    color: #2c2c2c;
+    text-decoration: underline;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 700px) {
+    .page-content,
+    .zwei-spalten {
+        grid-template-columns: 1fr;
+    }
+
+    .termin {
+        grid-template-columns: 1fr;
+        gap: .5rem;
+    }
+
+    .site-header__inner {
+        flex-wrap: wrap;
+    }
+}

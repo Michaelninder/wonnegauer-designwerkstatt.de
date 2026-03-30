@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<?= htmlspecialchars($page['description'] ?? '') ?>">
+    <meta name="keywords" content="Wonnegauer Designwerkstatt, Ternis, Designwerkstatt Ternis, Designwerkstatt, Brigitte Ternis, Wolfgang Ternis, Design Flörsheim-Dalsheim, Kunst Flörsheim-Dalsheim, Kultur Flörsheim-Dalsheim, Tourismus Flörsheim-Dalsheim, Gästeführung Flörsheim-Dalsheim, Atelier, Atelier Ternis, Kunst in Rheinhessen, Kunst im Wonnegau, Rheinhessen, Wonnegau, VG Monsheim, Rheinland-Pfalz">
     <title>
         <?= htmlspecialchars($config['site_name']) ?>
         <?php if (!empty($page['title'])): ?>
             – <?= htmlspecialchars($page['title']) ?>
         <?php endif; ?>
     </title>
-    <link rel="stylesheet" href="<?= url('assets/no-class.css') ?>">
+    <link rel="stylesheet" href="<?= url('assets/style.css') ?>">
 </head>
 <body>
     <?php include __DIR__ . '/../components/header.php'; ?>
 
-    <main>
+    <main class="site-main">
         <?php render_view($page['view'], $page, $config); ?>
     </main>
 

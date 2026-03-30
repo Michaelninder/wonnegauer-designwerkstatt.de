@@ -19,6 +19,26 @@ return [
             'title'       => 'Termine',
             'description' => 'Kommende Termine und Veranstaltungen.',
             'view'        => 'termine',
+            'termine'     => [
+                [
+                    'datum'       => '2026-04-12',
+                    'titel'       => 'Atelierführung Frühjahr',
+                    'beschreibung'=> 'Offene Atelierführung durch die Wonnegauer Designwerkstatt. Eintritt frei.',
+                    'ort'         => 'Atelier Ternis, Flörsheim-Dalsheim',
+                ],
+                [
+                    'datum'       => '2026-05-03',
+                    'titel'       => 'Radwanderung Rheinhessen',
+                    'beschreibung'=> 'Geführte Radwanderung durch die Weinberge Rheinhessens mit Brigitte Ternis.',
+                    'ort'         => 'Treffpunkt: Marktplatz Flörsheim-Dalsheim',
+                ],
+                [
+                    'datum'       => '2026-06-21',
+                    'titel'       => 'Sommerfest & Vernissage',
+                    'beschreibung'=> 'Eröffnung der Sommerausstellung mit neuen Acrylarbeiten von Wolfgang Ternis.',
+                    'ort'         => 'Atelier Ternis, Flörsheim-Dalsheim',
+                ],
+            ],
         ],
         'kunst' => [
             'title'       => 'Kunst',
