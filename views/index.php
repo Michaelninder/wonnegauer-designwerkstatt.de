@@ -14,7 +14,7 @@
 
     <article class="page-content">
         <div class="page-content__images">
-            <img src="<?= url('assets/img/index/lyon.jpg') ?>" alt="Gästeführungen und Radwanderungen in Rheinhessen">
+            <img src="<?= url('assets/img/index/lyon.JPG') ?>" alt="Gästeführungen und Radwanderungen in Rheinhessen">
         </div>
         <div class="page-content__text">
             <h2>Gästeführungen · Fahrradführungen · Radwanderungen</h2>
