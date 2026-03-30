@@ -69,6 +69,18 @@ return [
                     'text'   => '„Bühnenbild „Annabelle und die Wunschkugel"',
                 ],
                 [
+                    'bilder' => ['assets/img/kunst/SchemaDenken.JPG'],
+                    'text'   => "Schema - Denken\nJeder hat bestimmte Denkschemata, die nebeneinander funktionieren,die sich aber auch vermischen können.",
+                ],
+                [
+                    'bilder' => ['assets/img/kunst/EMPFANGSKOMITEE.JPG'],
+                    'text'   => "Begrüßer, in Gruppen oder als Einzelobjekte",
+                ],
+                [
+                    'bilder' => ['assets/img/kunst/das_wichtige.jpg'],
+                    'text'   => "Bilder zum Zyklus “Das Wichtige”\nErde, Himmel, Sonne und was daraus entsteht",
+                ],
+                [
                     'bilder' => ['assets/img/kunst/die_erde_brennt_1.JPG', 'assets/img/kunst/die_erde_brennt_2.JPG'],
                     'text'   => "„Die Erde brennt\"\nDer Hochglanzlack steht für den Glamour in der Welt, das matte Acryl für das reale Leben. Die Erde brennt in allen Bereichen – in Wirtschaft, Ökologie und Gesellschaft.",
                 ],
@@ -83,6 +95,21 @@ return [
             'title'       => 'Design',
             'description' => 'Designarbeiten und Projekte aus der Wonnegauer Designwerkstatt – Grafikdesign, Raumgestaltung und Produktdesign.',
             'view'        => 'design',
+            'items'       => [
+                [
+                    'bilder' => ['assets/img/design/einefueralle.jpg'],
+                    'text'   => '„Eine für Alle, die 360° Rundum-Uhr" – Veröffentlichung in der Zeitschrift „Möbel Design"',
+                ],
+                [
+                    'bilder' => ['assets/img/design/rundum_md2.jpg'],
+                    'text'   => '„Eine für Alle" – Veröffentlichung in der Zeitschrift „Uhren & Schmuck"',
+                ],
+                [
+                    'bilder' => ['assets/img/design/leuchte1.jpg', 'assets/img/design/leuchte2.jpg'],
+                    'text'   => '„Stehleuchte" – Plexiglaszylinder mit Halogenstrahler und unterschiedlichen Spiegeln zur Umlenkung des Lichtstrahls',
+                    'layout' => 'two-col', // two images side by side on desktop
+                ],
+            ],
         ],
         'wir' => [
             'title'       => 'Wir',
@@ -93,7 +120,28 @@ return [
             'title'       => 'Links',
             'description' => 'Empfehlenswerte Links zu Kunst, Kultur, Design und Tourismus in Rheinhessen und der Region.',
             'view'        => 'links',
-            'background_color' => 'rgb(255, 255, 153)',
+            'items'       => [
+                [
+                    'url'   => 'https://www.museum-vg-eich.de',
+                    'titel' => 'Museum VG Eich – Verbandsgemeinde Museum Gimbsheim',
+                ],
+                [
+                    'url'   => 'https://www.vg-monsheim.de',
+                    'titel' => 'Verbandsgemeinde Monsheim',
+                ],
+                [
+                    'url'   => 'https://www.rheinhessen.de',
+                    'titel' => 'Rheinhessen Tourismus',
+                ],
+                [
+                    'url'   => 'https://www.garons.fr',
+                    'titel' => 'Gemeinde Garons (Partnergemeinde)',
+                ],
+                [
+                    'url'   => 'https://www.fabianternis.de',
+                    'titel' => 'Fabian Ternis – Webentwicklung',
+                ],
+            ],
         ],
         'kontakt' => [
             'title'       => 'Kontakt',

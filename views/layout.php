@@ -24,5 +24,6 @@
 
         <?php include __DIR__ . '/../components/footer.php'; ?>
     </div>
+    <script src="<?= url('assets/nav.js') ?>"></script>
 </body>
 </html>
