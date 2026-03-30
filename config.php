@@ -7,13 +7,14 @@ return [
     'pages' => [
         'index' => [
             'title'       => 'Willkommen',
-            'description' => 'Wonnegauer Designwerkstatt – Kunst, Kultur und Design aus der Metropolregion Rhein-Neckar.',
+            'description' => 'Wonnegauer Designwerkstatt – Brigitte und Wolfgang Ternis aus Flörsheim-Dalsheim. Kunst, Kultur, Design und Gästeführungen in Rheinhessen.',
             'view'        => 'index',
         ],
         'aktuell' => [
             'title'       => 'Aktuell',
-            'description' => 'Aktuelle Neuigkeiten und Veranstaltungen der Wonnegauer Designwerkstatt.',
+            'description' => 'Aktuelle Neuigkeiten, Ausstellungen und Öffnungszeiten der Wonnegauer Designwerkstatt in Flörsheim-Dalsheim.',
             'view'        => 'aktuell',
+            'background_color' => 'rgb(255, 255, 204)',
             'items'       => [
                 [
                     'text' => 'Öffnungszeiten nach Vereinbarung, oder einfach mal klingeln – wenn wir da sind, sind wir für Sie da.',
@@ -25,33 +26,22 @@ return [
             ],
         ],
         'termine' => [
-            'title'       => 'Termine',
-            'description' => 'Kommende Termine und Veranstaltungen.',
-            'view'        => 'termine',
+            'title'            => 'Termine',
+            'description'      => 'Kommende Veranstaltungen, Atelierführungen und Radwanderungen der Wonnegauer Designwerkstatt.',
+            'view'             => 'termine',
+            'background_color' => 'rgb(194, 232, 195)',
             'termine'     => [
                 [
-                    'datum'       => '2026-04-12',
-                    'titel'       => 'Atelierführung Frühjahr',
-                    'beschreibung'=> 'Offene Atelierführung durch die Wonnegauer Designwerkstatt. Eintritt frei.',
-                    'ort'         => 'Atelier Ternis, Flörsheim-Dalsheim',
-                ],
-                [
-                    'datum'       => '2026-05-03',
-                    'titel'       => 'Radwanderung Rheinhessen',
-                    'beschreibung'=> 'Geführte Radwanderung durch die Weinberge Rheinhessens mit Brigitte Ternis.',
-                    'ort'         => 'Treffpunkt: Marktplatz Flörsheim-Dalsheim',
-                ],
-                [
-                    'datum'       => '2026-06-21',
-                    'titel'       => 'Sommerfest & Vernissage',
-                    'beschreibung'=> 'Eröffnung der Sommerausstellung mit neuen Acrylarbeiten von Wolfgang Ternis.',
-                    'ort'         => 'Atelier Ternis, Flörsheim-Dalsheim',
+                    'datum'       => '99-99-99',
+                    'titel'       => 'Beispiel',
+                    'beschreibung'=> 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi maiores quia quasi iusto accusamus eveniet tempora, libero quam quaerat architecto, omnis nihil officia repudiandae maxime ad debitis. Culpa, velit! Nisi.',
+                    'ort'         => 'Ort Platzhalter',
                 ],
             ],
         ],
         'kunst' => [
             'title'       => 'Kunst',
-            'description' => 'Kunstprojekte und Ausstellungen der Wonnegauer Designwerkstatt.',
+            'description' => 'Kunstwerke und Projekte von Wolfgang Ternis – Acrylbilder, Plastiken und Installationen aus der Wonnegauer Designwerkstatt.',
             'view'        => 'kunst',
             'items'       => [
                 [
@@ -86,32 +76,33 @@ return [
         ],
         'kultur' => [
             'title'       => 'Kultur',
-            'description' => 'Kulturelles Engagement und Projekte.',
+            'description' => 'Kulturelles Engagement der Wonnegauer Designwerkstatt – Veranstaltungen, Kooperationen und regionale Kulturprojekte in Rheinhessen.',
             'view'        => 'kultur',
         ],
         'design' => [
             'title'       => 'Design',
-            'description' => 'Designprojekte und Arbeiten aus der Werkstatt.',
+            'description' => 'Designarbeiten und Projekte aus der Wonnegauer Designwerkstatt – Grafikdesign, Raumgestaltung und Produktdesign.',
             'view'        => 'design',
         ],
         'wir' => [
             'title'       => 'Wir',
-            'description' => 'Das Team hinter der Wonnegauer Designwerkstatt.',
+            'description' => 'Brigitte und Wolfgang Ternis – Dipl.-Designer aus Flörsheim-Dalsheim, Gründer der Wonnegauer Designwerkstatt.',
             'view'        => 'wir',
         ],
         'links' => [
             'title'       => 'Links',
-            'description' => 'Interessante Links und Empfehlungen.',
+            'description' => 'Empfehlenswerte Links zu Kunst, Kultur, Design und Tourismus in Rheinhessen und der Region.',
             'view'        => 'links',
+            'background_color' => 'rgb(255, 255, 153)',
         ],
         'kontakt' => [
             'title'       => 'Kontakt',
-            'description' => 'Kontaktieren Sie die Wonnegauer Designwerkstatt.',
+            'description' => 'Kontakt zur Wonnegauer Designwerkstatt – Adresse, Telefon und E-Mail von Brigitte und Wolfgang Ternis in Flörsheim-Dalsheim.',
             'view'        => 'kontakt',
         ],
         'impressum' => [
             'title'       => 'Impressum',
-            'description' => 'Impressum und rechtliche Hinweise.',
+            'description' => 'Impressum der Wonnegauer Designwerkstatt – Angaben gemäß § 5 TMG.',
             'view'        => 'impressum',
         ],
     ],

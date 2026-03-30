@@ -159,6 +159,15 @@ p:last-child { margin-bottom: 0; }
     grid-template-columns: 1fr 2fr;
     gap: 2rem;
     align-items: start;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #d4cfc8;
+}
+
+.page-content:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .page-content__images {
@@ -240,6 +249,32 @@ p:last-child { margin-bottom: 0; }
 }
 
 .termin-titel { margin-bottom: .25rem; }
+
+/* ── Impressum ────────────────────────────────────────────── */
+.page-impressum section {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #d4cfc8;
+}
+
+.page-impressum section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.page-impressum address {
+    font-style: normal;
+    line-height: 1.9;
+    margin: .75rem 0;
+}
+
+.page-impressum ul {
+    margin: .5rem 0 1rem 1.5rem;
+}
+
+.page-impressum ul li {
+    margin-bottom: .25rem;
+}
 
 /* ── Kontakt ──────────────────────────────────────────────── */
 .kontakt-adresse {
