@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="<?= url('assets/style.css') ?>">
 </head>
 <body>
-    <div class="site-body">
+    <div class="site-body"<?php if (!empty($page['background_color'])): ?> style="--page-bg: <?= htmlspecialchars($page['background_color']) ?>"<?php endif; ?>>
         <?php include __DIR__ . '/../components/header.php'; ?>
 
         <main class="site-main">
