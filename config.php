@@ -14,6 +14,15 @@ return [
             'title'       => 'Aktuell',
             'description' => 'Aktuelle Neuigkeiten und Veranstaltungen der Wonnegauer Designwerkstatt.',
             'view'        => 'aktuell',
+            'items'       => [
+                [
+                    'text' => 'Öffnungszeiten nach Vereinbarung, oder einfach mal klingeln – wenn wir da sind, sind wir für Sie da.',
+                ],
+                [
+                    'text' => 'Ausstellung „Orange" im Verbandsgemeinde Museum in Gimbsheim.',
+                    'link' => ['href' => 'https://www.museum-vg-eich.de', 'label' => 'www.museum-vg-eich.de'],
+                ],
+            ],
         ],
         'termine' => [
             'title'       => 'Termine',

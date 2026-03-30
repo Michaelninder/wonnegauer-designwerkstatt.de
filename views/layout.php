@@ -14,12 +14,14 @@
     <link rel="stylesheet" href="<?= url('assets/style.css') ?>">
 </head>
 <body>
-    <?php include __DIR__ . '/../components/header.php'; ?>
+    <div class="site-body">
+        <?php include __DIR__ . '/../components/header.php'; ?>
 
-    <main class="site-main">
-        <?php render_view($page['view'], $page, $config); ?>
-    </main>
+        <main class="site-main">
+            <?php render_view($page['view'], $page, $config); ?>
+        </main>
 
-    <?php include __DIR__ . '/../components/footer.php'; ?>
+        <?php include __DIR__ . '/../components/footer.php'; ?>
+    </div>
 </body>
 </html>

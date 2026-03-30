@@ -1,4 +1,8 @@
 <header class="site-header">
+    <img class="site-header__top"
+         src="<?= url('assets/img/banners/TOP.jpg') ?>"
+         alt="Wonnegauer Designwerkstatt">
+
     <?php
         $bannerFile = dirname(__DIR__) . "/public/assets/img/banners/{$page['slug']}.jpg";
         $bannerSrc  = file_exists($bannerFile)
