@@ -510,9 +510,26 @@ p:last-child { margin-bottom: 0; }
         gap: .5rem;
     }
 
-    /* hamburger visible */
+    /* hamburger visible — fixed from the start so no jump on open */
     .nav-toggle {
         display: flex;
+        position: fixed;
+        top: 2.75rem;
+        right: 1.5rem;
+        z-index: 300;
+        background: rgba(255,255,255,.92);
+        border-radius: 4px;
+        padding: .5rem;
+        box-shadow: 0 1px 6px rgba(0,0,0,.15);
+    }
+
+    body.nav-open .nav-toggle {
+        background: rgba(60,60,60,.85);
+    }
+
+    /* compensate the space the toggle occupied in the identity bar */
+    .site-header__identity {
+        padding-right: 3.5rem;
     }
 
     /* fullscreen overlay nav */
@@ -562,5 +579,7 @@ p:last-child { margin-bottom: 0; }
     }
 
     /* prevent body scroll when nav open */
-    body.nav-open { overflow: hidden; }
+    body.nav-open {
+        overflow: hidden;
+    }
 }
